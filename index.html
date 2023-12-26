@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>libary</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/index.js" defer></script>
+</head>
+<body>
+  <dialog id="favDialog"  >
+    <form method="dialog">
+      <h3>add a book to your libary</h3>
+      <div>
+        <div>
+          <label for="bookname">
+            bookname:
+          </label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="author">
+            author's name:
+          </label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="pages">
+            how many pages
+          </label>
+          <input type="number" name="pages">
+        </div>
+          <div>
+            <label>
+              did you read the book:
+            </label>
+            <select>
+              <option value="default">Choose…</option>
+              <option>yes</option>
+              <option>no</option>
+            </select>
+          </div>
+      </div>
+      <div id="btn-container">
+        <button value="cancel" id="js-close" formmethod="dialog">Cancel</button>
+        <button id="confirmBtn" value="default">Confirm</button>
+      </div>
+    </form>
+  </dialog>
+    <div class="nav">
+        <div>
+          <h1>libary</h1>
+          <img src="/book.png" alt="">
+        </div>  
+        <button id="addbook">+</button>
+    </div>
+    <div class="main">
+        <div class="main-div">
+            <h2>Your plibrary is empty !</h2>
+            <p>Click the "<strong>+</strong>" button to add a new book</p>
+            <p>-- (OR) --</p>
+            <button class="try-books">Try some books</button>
+        </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p><a href="#">opama</a> <a href="#">sourcecode</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+*{
+    border: 0;
+    margin:0;
+
+}
+
+.nav {
+    display:flex;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 2px;
+    background-color: whitesmoke;
+    font-family: cursive;
+}
+.nav  img {
+    width: 30px;
+    height: 30px;
+    margin-top: 3px;
+}
+.nav > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+
+#addbook {
+    border-radius: 200%;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-right: 4px;
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+    }
+
+    #addbook:active{
+        color: blue;
+        transform: scaleX(2);
+    }
+    #addbook:hover{
+        color: blue;
+    }
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 87vh;
+
+}
+.main-div{
+    align-items: center;
+}
+
+.footer {
+    background-color: grey;
+    height: 48px;
+    display:flex;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+    padding-top: 2px;
+    position: absolute;
+    background-color: grey;
+}
+
+
+
+#favDialog > form {
+    display: flex;
+    flex-direction: column;
+    background-color:wheat;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%; 
+}
+
+form > div {
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+form > div div {
+    display: flex;
+    flex-direction: column;
+}
+
+#btn-container{
+    display: flex;
+    flex-direction: row;
+    gap:20px
+}
