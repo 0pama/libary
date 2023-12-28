@@ -1,70 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>libary</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="/index.js" defer></script>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <script src="/index.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v2 library</title>
 </head>
 <body>
-  <dialog id="favDialog"  >
-    <form method="dialog">
-      <h3>add a book to your libary</h3>
-      <div>
-        <div>
-          <label for="bookname">
-            bookname:
-          </label>
-          <input type="text">
+  <h1>A simple library</h1>
+  <h2>With local storage. by <a href="#">0pama</a></h2>
+  <div class="addbookdiv">
+    <dialog>
+      <form id="bookForm">
+        <input type="text" name="author" id="author" placeholder="Author name" required>
+        <input type="text" name="book-name" id="book-name" placeholder="Book name" required>
+        <input type="number" name="pages" id="pages" placeholder="How many pages" required>
+        Did you read the book:
+        <select name="status" id="status" required>
+          <option value="" default>Choose</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        <div id="btns">
+          <button type="submit">Add book</button>
+          <button  id="closeButton">close form</button>
         </div>
-        <div>
-          <label for="author">
-            author's name:
-          </label>
-          <input type="text">
-        </div>
-        <div>
-          <label for="pages">
-            how many pages
-          </label>
-          <input type="number" name="pages">
-        </div>
-          <div>
-            <label>
-              did you read the book:
-            </label>
-            <select>
-              <option value="default">Choose…</option>
-              <option>yes</option>
-              <option>no</option>
-            </select>
-          </div>
-      </div>
-      <div id="btn-container">
-        <button value="cancel" id="js-close" formmethod="dialog">Cancel</button>
-        <button id="confirmBtn" value="default">Confirm</button>
-      </div>
-    </form>
-  </dialog>
-    <div class="nav">
-        <div>
-          <h1>libary</h1>
-          <img src="/book.png" alt="">
-        </div>  
-        <button id="addbook">+</button>
-    </div>
-    <div class="main">
-        <div class="main-div">
-            <h2>Your plibrary is empty !</h2>
-            <p>Click the "<strong>+</strong>" button to add a new book</p>
-            <p>-- (OR) --</p>
-            <button class="try-books">Try some books</button>
-        </div>
-        </div>
-    </div>
-    <div class="footer">
-        <p><a href="#">opama</a> <a href="#">sourcecode</a></p>
-    </div>
+      </form>
+    </dialog>
+    <button id="populate-btn" onclick="populate()">add 10 books to library</button>
+    <button id="show-btn" >add new book</button>
+
+  </div>
+  <div class="display-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Author</th>
+          <th>Name of the book</th>
+          <th>Pages</th>
+          <th>Read</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="t-body"></tbody>
+    </table>
+  </div>
 </body>
 </html>
+>>>>>>> v2
