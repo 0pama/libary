@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-const showBtn = document.getElementById("addbook");
-const dialog = document.getElementById("favDialog");
-const jsCloseBtn = dialog.querySelector("#js-close");
 
-showBtn.addEventListener("click", () => {
-  dialog.showModal();
-});
-
-jsCloseBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  dialog.close();
-});
-=======
 const form = document.getElementById("bookForm");
 const tableBody = document.getElementById("t-body");
 const library = [];
@@ -139,4 +126,3 @@ closeButton.addEventListener("click", (e) => {
     e.preventDefault();
   dialog.close();
 });
->>>>>>> v2
