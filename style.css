@@ -109,10 +109,9 @@ tbody tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-
 #show-btn{
     position: absolute;
-    left: 770px;
+    right: 770px;
 }
 
 #closeButton ,#delete-book-btn{
@@ -121,5 +120,6 @@ tbody tr:nth-child(even) {
 
 #populate-btn {
     position: absolute;
-    left: 520px;
+    right: 970px;
+
 }
