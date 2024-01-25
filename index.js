@@ -4,11 +4,13 @@ const tableBody = document.getElementById("t-body");
 const library = [];
 
 
-function Book(author, name, pages, status) {
-    this.author = author;
-    this.name = name;
-    this.pages = pages;
-    this.read = status;
+class Book {
+    constructor(author, name, pages, status) {
+        this.author = author;
+        this.name = name;
+        this.pages = pages;
+        this.read = status;
+    }
 }
 
 
