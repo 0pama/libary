@@ -101,11 +101,12 @@ form.addEventListener("submit",addBook);
 
 
 function populate(){
+   if(library.length == 0){
     for(let i =1;i <11;i++){
         let book = new Book("anas",`book:${i}`,"100","yes");
         library.push(book);
     }
-    document.getElementById('populate-btn').disabled = true
+   }
     updateTable()
 }
    
@@ -126,3 +127,10 @@ closeButton.addEventListener("click", (e) => {
     e.preventDefault();
   dialog.close();
 });
+
+
+closeButton.addEventListener("click", e => {
+    e.preventDefault();
+    dialog.close();
+    
+})
