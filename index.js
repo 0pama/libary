@@ -1,6 +1,13 @@
 
 const form = document.getElementById("bookForm");
 const tableBody = document.getElementById("t-body");
+
+let pagesNumber = document.getElementById('pages');
+let authorInputValidation = document.getElementById('author');
+let bookNameValidation = document.getElementById('book-name');
+let statusValidation = document.getElementById('status');
+
+
 const library = [];
 
 
@@ -136,3 +143,57 @@ closeButton.addEventListener("click", e => {
     dialog.close();
     
 })
+
+
+
+function validatePages() {
+    if (pagesNumber.validity.rangeUnderflow) {
+        pagesNumber.setCustomValidity("It's too short to be considered a book.");
+    } else {
+        pagesNumber.setCustomValidity("");
+    }
+}
+
+function validateAuthor() {
+    if (authorInputValidation.validity.valueMissing) {
+        authorInputValidation.setCustomValidity("Missing author name.");
+    } else if (authorInputValidation.validity.tooShort) {
+        authorInputValidation.setCustomValidity("Author name too short.");
+    } else {
+        authorInputValidation.setCustomValidity("");
+    }
+}
+
+function validateBookName() {
+    if (bookNameValidation.validity.valueMissing) {
+        bookNameValidation.setCustomValidity("Missing book name.");
+    } else if (bookNameValidation.validity.tooShort) {
+        bookNameValidation.setCustomValidity("Book name too short.");
+    } else {
+        bookNameValidation.setCustomValidity("");
+    }
+}
+
+function validateStatus() {
+    console.log(typeof statusValidation.value)
+    if (statusValidation.value === "") {
+        statusValidation.setCustomValidity("Choose whether you read the book or not.");
+    } else {
+        statusValidation.setCustomValidity("");
+    }
+}
+
+pagesNumber.addEventListener("input", validatePages);
+authorInputValidation.addEventListener("input", validateAuthor);
+bookNameValidation.addEventListener("input", validateBookName);
+statusValidation.addEventListener("input", validateStatus);
+
+function validateForm() {
+    validatePages();
+    validateAuthor();
+    validateBookName();
+    validateStatus();
+    
+}
+
+form.addEventListener("submit", validateForm);
