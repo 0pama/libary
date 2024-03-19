@@ -13,9 +13,10 @@
   <div class="addbookdiv">
     <dialog>
       <form id="bookForm">
-        <input type="text" name="author" id="author" placeholder="Author name" required>
-        <input type="text" name="book-name" id="book-name" placeholder="Book name" required>
-        <input type="number" name="pages" id="pages" placeholder="How many pages" required>
+        <h1>Add a Book</h1>
+        <input type="text" name="author" minlength="10" id="author" placeholder="Author name" required>
+        <input type="text" name="book-name" minlength="10" id="book-name" placeholder="Book name" required>
+        <input type="number" name="pages" id="pages" min="20"placeholder="How many pages" required>
         Did you read the book:
         <select name="status" id="status" required>
           <option value="" default>Choose</option>
@@ -23,7 +24,7 @@
           <option value="no">No</option>
         </select>
         <div id="btns">
-          <button type="submit">Add book</button>
+          <button id="submitbtn" type="submit">Add book</button>
           <button  id="closeButton">close form</button>
         </div>
       </form>

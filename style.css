@@ -45,12 +45,19 @@ h2 a:hover {
 form {
     display: flex;
     font-weight: bolder;
-    height: 700px;
+    
     width: 100vh;
     padding: 50px;
     gap: 10px;
     flex-direction: column;
     position: relative;
+}
+dialog::backdrop{
+background-color: rgba(52, 152, 219, 0.3)
+}
+dialog{
+    border: none;
+    border-radius:  10px;;
 }
 
 input, select {
@@ -83,8 +90,8 @@ button:hover {
 }
 
 table {
-    width: 100vh;
-    height: 60vh;
+    width: 109vh;
+    height: auto;
     border-collapse: collapse;
     margin-top: 20px;
 }
@@ -93,6 +100,7 @@ th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    
 }
 tr {
     height: 10px;
