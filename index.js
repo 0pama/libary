@@ -186,7 +186,11 @@ function validateStatus() {
 pagesNumber.addEventListener("input", validatePages);
 authorInputValidation.addEventListener("input", validateAuthor);
 bookNameValidation.addEventListener("input", validateBookName);
+<<<<<<< HEAD
 statusValidation.addEventListener("blur", validateStatus);
+=======
+statusValidation.addEventListener("input", validateStatus);
+>>>>>>> 047e24a89c761f07a09a741f7f4a610aedd557e8
 
 function validateForm() {
     validatePages();
